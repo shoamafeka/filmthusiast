@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Avatar Image -->
+    <ImageView
+        android:id="@+id/avatarImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/circle_white"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fui_ic_anonymous_white_24dp"
+        app:layout_constraintEnd_toStartOf="@id/user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/purple_800" />
+
+    <!-- Message Bubble -->
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="User"
+        android:fontFamily="@font/raleway"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/avatarImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Timestamp -->
+    <TextView
+        android:id="@+id/messageText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/chat"
+        android:padding="12dp"
+        android:fontFamily="@font/raleway"
+        android:text="Hi, hello world"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user" />
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="22:00"
+        android:textColor="@color/gray"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/avatarImage"
+        app:layout_constraintTop_toBottomOf="@id/messageText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

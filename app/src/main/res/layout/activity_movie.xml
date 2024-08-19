@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/category">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imagePoster"
+                        android:layout_width="match_parent"
+                        android:layout_height="500dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/gradient_background" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/raleway"
+                                android:text="MOVIE"
+                                android:textColor="#E91E63"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/duration"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal|center_vertical"
+                                    android:layout_marginLeft="8dp"
+                                    android:fontFamily="@font/raleway"
+                                    android:text="0 mins"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:id="@+id/year"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal|center_vertical"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="2024"
+                                    android:fontFamily="@font/raleway"
+                                    android:textSize="20sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_genre_categories"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:scrollbars="horizontal"
+                            tools:listitem="@layout/item_category" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/category"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Overview"
+                                android:textStyle="bold"
+                                tools:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/description"
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/raleway"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:id="@+id/textViewOverview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Actors"
+                                android:fontFamily="@font/raleway"
+                                android:textStyle="bold"
+                                tools:textStyle="bold" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_actors_categories"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="horizontal"
+                                android:scrollbars="horizontal"
+                                tools:listitem="@layout/item_category" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rate"
+                                android:fontFamily="@font/raleway"
+                                android:textStyle="bold"
+                                tools:textStyle="bold" />
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/addImage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="200dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:src="@drawable/add_image"
+                                android:layout_marginBottom="10dp"
+                                android:scaleType="fitCenter"
+
+                                />
+                            <androidx.appcompat.widget.AppCompatRatingBar
+                                android:id="@+id/userRatebar"
+                                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/comment"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginVertical="5dp"
+                                android:indeterminateOnly="false"
+                                android:isIndicator="false"
+                                android:mirrorForRtl="false"
+                                android:progressTint="@color/yellow_400"
+                                android:secondaryProgressTint="@color/orange_400"
+                                android:stepSize="0.5"
+                                tools:ratings="0" />
+
+                            <EditText
+                                android:id="@+id/comment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/category"
+                                android:ems="10"
+                                android:fontFamily="@font/raleway"
+                                android:hint="Write a review..."
+
+                                android:inputType="textMultiLine"
+                                android:padding="8dp"
+
+                                android:textSize="14sp" />
+
+
+                            <Button
+                                android:id="@+id/submit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/raleway"
+                                android:text="Submit" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ratings"
+                                android:fontFamily="@font/raleway"
+                                android:textStyle="bold"
+                                tools:textStyle="bold" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rating"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="30dp"
+                                tools:listitem="@layout/item_rating" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="8dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/input_field"
+                        android:elevation="10dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/backk"
+                        app:tint="#673AB7" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"></LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
