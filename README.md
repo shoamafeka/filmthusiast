@@ -45,4 +45,4 @@
 - **Chat**: Long press on a chat message to delete it (only if you are the message owner).
 
 
-Thank you for using **Filmthusiast**! We hope you enjoy it.
+Thank you for using **Filmthusiast**! I hope you enjoy it.
